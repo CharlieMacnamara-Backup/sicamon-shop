@@ -3,26 +3,43 @@ import Image from "next/image";
 
 const featureBlocks = [
   {
-    title: 'Core Vocabulary Grid',
-    description: 'Build a communication board that fits you. Add personal photos, choose comfortable colors, and record familiar voices to make every button your own.',
-    imageSrc: '/assets/images/samples/aac-custom-form.png',
-    imageAlt: 'AAC Custom Form Interface',
+    title: 'Your Voice, Your Way',
+    description: 'Tap words to build sentences. Choose the symbols that match your thoughts. Easily customize your grid and auto-generate synonyms to expand your vocabulary exactly how you need it.',
+    imageSrc: '/assets/images/samples/aac.png',
+    imageAlt: 'AAC Communication Board',
+    secondaryImages: ['/assets/images/samples/aac-custom-form.png', '/assets/images/samples/synonym.png'],
     align: 'right'
   },
   {
-    title: 'Tools for Calm and Focus',
-    description: 'Manage overwhelm the moment it happens. Access built-in breathing guides, emotion cards, and digital fidgets to regain focus and return to a calm state.',
+    title: 'Master Breath',
+    description: 'Follow the movement to calm the mind. Control your focus and find your center. Use visual breathing patterns and digital fidget tools for immediate sensory support.',
     imageSrc: '/assets/images/samples/breathing-control.png',
-    imageAlt: 'Breathing Control Interface',
-    secondaryImages: ['/assets/images/samples/emotion card.png', '/assets/images/samples/fidget-nav.png'],
+    imageAlt: 'Breathing Control Visual',
+    secondaryImages: ['/assets/images/samples/fidget-nav.png'],
     align: 'left'
   },
   {
-    title: 'Interactive Practice',
-    description: 'Practice social interactions in a low-pressure environment. Play structured games like Tic-Tac-Toe to build confidence before real-world conversations.',
+    title: 'Step into the Frame',
+    description: 'Align your reflection with the target. Show your emotion and witness the match. Interactive Emotion Cards provide a safe way to practice identifying and expressing feelings.',
+    imageSrc: '/assets/images/samples/emotion card.png',
+    imageAlt: 'Emotion Cards Interface',
+    secondaryImages: [],
+    align: 'right'
+  },
+  {
+    title: 'Master the Studio',
+    description: 'Record and perfect. Capture your voice and refine every word. Use the Echo Studio and Syllable Lab to break down tricky phrases piece by piece and build your mastery.',
+    imageSrc: '/assets/images/samples/studio.png',
+    imageAlt: 'Echo Studio Recording Interface',
+    secondaryImages: [],
+    align: 'left'
+  },
+  {
+    title: 'Outsmart the Play',
+    description: 'Take turns and share strategies. Claim your space on the board. Practice social interactions in a structured environment through games like Tik-Tac-Toe.',
     imageSrc: '/assets/images/samples/tik-tak-toe.png',
-    imageAlt: 'Tic-Tac-Toe Social Game',
-    secondaryImages: ['/assets/images/samples/synonym.png'],
+    imageAlt: 'Tik-Tac-Toe Interactive Game',
+    secondaryImages: [],
     align: 'right'
   }
 ];
@@ -33,10 +50,10 @@ export function ProductShowcase() {
       <Container>
         <div className="max-w-3xl mx-auto text-center mb-16 sm:mb-24">
           <h2 className="text-3xl font-extrabold text-zinc-900 tracking-tight sm:text-4xl font-display dark:text-zinc-100">
-            More than just a voice.
+            A Complete Toolkit.
           </h2>
           <p className="mt-4 text-lg text-zinc-500 dark:text-zinc-400">
-            Communicate clearly and stay grounded. Skillio provides a customizable communication grid, instant emotional support tools, and interactive activities to help you navigate every interaction.
+            Explore activities and games designed for connection. From everyday conversations to dedicated sound practice and emotional regulation, discover every tool inside.
           </p>
         </div>
 
@@ -60,7 +77,7 @@ export function ProductShowcase() {
                 <div className="relative">
                   {/* Primary Image */}
                   <div className="card-soft overflow-hidden p-2">
-                     <div className="rounded-[1.5rem] overflow-hidden">
+                     <div className="rounded-3xl overflow-hidden">
                      <Image 
                         src={feature.imageSrc} 
                         alt={feature.imageAlt}
