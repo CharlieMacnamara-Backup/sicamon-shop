@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@plugin "@tailwindcss/typography";
+
+:root {
+  --skillio-indigo: #6366f1;
+  --skillio-purple: #8b5cf6;
+  --skillio-teal: #14b8a6;
+  
+  /* Fitzgerald Key Colors */
+  --aac-social: #facc15;
+  --aac-action: #ec4899;
+  --aac-desc: #3b82f6;
+  --aac-object: #f97316;
+}
+
+body {
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system, sans-serif;
+  @apply bg-zinc-50 text-zinc-900 antialiased dark:bg-zinc-950 dark:text-zinc-100;
+}
+
+.font-display {
+  font-family: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
+}
+
+.glass {
+  @apply bg-white/70 backdrop-blur-md border border-white/20 dark:bg-zinc-900/70 dark:border-white/10;
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-linear-to-r from-indigo-500 via-purple-500 to-pink-500;
+}
+
+.btn-premium {
+  @apply relative inline-flex items-center justify-center px-8 py-3 font-semibold text-white transition-all duration-300 rounded-full bg-linear-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 hover:shadow-lg hover:scale-105 active:scale-95;
+}
