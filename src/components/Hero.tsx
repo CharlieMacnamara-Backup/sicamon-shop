@@ -33,7 +33,7 @@ export function Hero() {
           </div>
           <div className="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
              {/* Decorative blob background */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[120%] h-[120%] bg-teal-500/10 blur-[100px] rounded-full -z-10" />
+             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[120%] h-[120%] bg-teal-500/10 blur-3xl rounded-full -z-10" />
             
             <div className="relative mx-auto w-4/5 sm:w-2/3 md:w-1/2 lg:w-4/5 xl:w-2/3 card-soft overflow-hidden p-2">
               <div className="bg-zinc-50 dark:bg-zinc-800/50 rounded-3xl flex items-center justify-center overflow-hidden border border-zinc-100 dark:border-zinc-800">

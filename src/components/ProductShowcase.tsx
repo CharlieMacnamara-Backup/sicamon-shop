@@ -92,7 +92,7 @@ export function ProductShowcase() {
                   
                   {/* Secondary Floating Images (if any) */}
                   {feature.secondaryImages && feature.secondaryImages.length > 0 && (
-                    <div className="absolute -bottom-8 -right-8 sm:-bottom-12 sm:-right-12 w-2/5 lg:w-1/2 xl:w-2/5 card-soft overflow-hidden p-2 z-10 hidden sm:block">
+                    <div className="absolute -bottom-6 -right-6 sm:-bottom-10 sm:-right-10 md:-bottom-12 md:-right-12 w-2/5 lg:w-1/2 xl:w-2/5 card-soft overflow-hidden p-1.5 z-10 hidden sm:block">
                       <div className="rounded-3xl overflow-hidden border border-zinc-100 dark:border-zinc-800">
                       <Image 
                         src={feature.secondaryImages[0]} 
@@ -107,7 +107,7 @@ export function ProductShowcase() {
                     </div>
                   )}
                   {feature.secondaryImages && feature.secondaryImages.length > 1 && (
-                    <div className="absolute -top-8 -left-8 sm:-top-12 sm:-left-12 w-2/5 lg:w-1/2 xl:w-2/5 card-soft overflow-hidden p-2 z-10 hidden sm:block">
+                    <div className="absolute -top-6 -left-6 sm:-top-10 sm:-left-10 md:-top-12 md:-left-12 w-2/5 lg:w-1/2 xl:w-2/5 card-soft overflow-hidden p-1.5 z-10 hidden sm:block">
                       <div className="rounded-3xl overflow-hidden border border-zinc-100 dark:border-zinc-800">
                       <Image 
                         src={feature.secondaryImages[1]} 
