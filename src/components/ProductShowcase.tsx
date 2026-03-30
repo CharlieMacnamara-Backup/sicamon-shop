@@ -76,41 +76,44 @@ export function ProductShowcase() {
                 
                 <div className="relative">
                   {/* Primary Image */}
-                  <div className="card-soft overflow-hidden p-2">
-                     <div className="rounded-3xl overflow-hidden">
+                  <div className="card-soft overflow-hidden p-2 mx-auto max-w-sm lg:max-w-md">
+                     <div className="rounded-3xl overflow-hidden relative border border-zinc-100 dark:border-zinc-800">
                      <Image 
                         src={feature.imageSrc} 
                         alt={feature.imageAlt}
-                        width={800}
-                        height={600}
-                        className="w-full h-auto object-cover"
+                        width={1170}
+                        height={2532}
+                        quality={100}
+                        className="w-full h-auto object-contain bg-zinc-50 dark:bg-zinc-900"
                      />
                      </div>
                   </div>
                   
                   {/* Secondary Floating Images (if any) */}
                   {feature.secondaryImages && feature.secondaryImages.length > 0 && (
-                    <div className="absolute -bottom-6 -right-6 w-1/2 card-soft overflow-hidden p-2 z-10 hidden sm:block">
-                      <div className="rounded-3xl overflow-hidden">
+                    <div className="absolute -bottom-12 -right-12 w-2/3 max-w-[200px] card-soft overflow-hidden p-2 z-10 hidden sm:block">
+                      <div className="rounded-[1.5rem] overflow-hidden border border-zinc-100 dark:border-zinc-800">
                       <Image 
                         src={feature.secondaryImages[0]} 
                         alt="Secondary feature"
-                        width={400}
-                        height={300}
-                        className="w-full h-auto object-cover"
+                        width={1170}
+                        height={2532}
+                        quality={100}
+                        className="w-full h-auto object-contain bg-zinc-50 dark:bg-zinc-900"
                       />
                       </div>
                     </div>
                   )}
                   {feature.secondaryImages && feature.secondaryImages.length > 1 && (
-                    <div className="absolute -top-6 -left-6 w-[40%] card-soft overflow-hidden p-2 z-10 hidden sm:block">
-                      <div className="rounded-3xl overflow-hidden">
+                    <div className="absolute -top-12 -left-12 w-2/3 max-w-[200px] card-soft overflow-hidden p-2 z-10 hidden sm:block">
+                      <div className="rounded-[1.5rem] overflow-hidden border border-zinc-100 dark:border-zinc-800">
                       <Image 
                         src={feature.secondaryImages[1]} 
                         alt="Additional feature"
-                        width={400}
-                        height={300}
-                        className="w-full h-auto object-cover"
+                        width={1170}
+                        height={2532}
+                        quality={100}
+                        className="w-full h-auto object-contain bg-zinc-50 dark:bg-zinc-900"
                       />
                       </div>
                     </div>
