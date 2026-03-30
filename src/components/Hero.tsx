@@ -6,7 +6,7 @@ export function Hero() {
   return (
     <div className="relative pt-20 pb-8 lg:pt-32 lg:pb-12">
       <Container>
-        <div className="lg:grid lg:grid-cols-12 lg:gap-8">
+        <div className="lg:grid lg:grid-cols-12 lg:gap-8 lg:items-center">
           <div className="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left">
             <h1>
               <span className="block text-sm font-semibold tracking-wide text-teal-600 uppercase dark:text-teal-400 font-display">
