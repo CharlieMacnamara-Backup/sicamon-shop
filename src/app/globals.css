@@ -28,9 +28,13 @@ body {
 }
 
 .gradient-text {
-  @apply bg-clip-text text-transparent bg-linear-to-r from-indigo-500 via-purple-500 to-pink-500;
+  @apply bg-clip-text text-transparent bg-linear-to-r from-teal-500 to-sky-500;
 }
 
 .btn-premium {
-  @apply relative inline-flex items-center justify-center px-8 py-3 font-semibold text-white transition-all duration-300 rounded-full bg-linear-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 hover:shadow-lg hover:scale-105 active:scale-95;
+  @apply relative inline-flex items-center justify-center px-8 py-3 font-semibold text-white transition-colors duration-200 rounded-[2rem] bg-teal-500 hover:bg-teal-400 shadow-sm active:bg-teal-600;
+}
+
+.card-soft {
+  @apply rounded-[2rem] bg-white border border-zinc-100 shadow-sm dark:bg-zinc-800 dark:border-zinc-700/50;
 }

@@ -9,21 +9,21 @@ export default function Home() {
       <Hero />
       
       <Container id="features">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-          <div className="p-8 rounded-3xl glass border-indigo-100 dark:border-indigo-900/30">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center pt-8">
+          <div className="p-8 card-soft">
             <div className="text-4xl mb-4">🎨</div>
-            <h3 className="text-xl font-bold font-display mb-2">Accessible & Sensory-Friendly</h3>
-            <p className="text-zinc-500 dark:text-zinc-400">Designed with soft colors, reduced visual load, and deeply customizable interfaces to prevent overwhelm.</p>
+            <h3 className="text-xl font-bold font-display mb-2">Sensory-Safe Design</h3>
+            <p className="text-zinc-500 dark:text-zinc-400">Navigate a calm, uncluttered interface. Soft colors and clear strictures reduce visual fatigue and prevent overwhelm.</p>
           </div>
-          <div className="p-8 rounded-3xl glass border-purple-100 dark:border-purple-900/30">
+          <div className="p-8 card-soft">
             <div className="text-4xl mb-4">🧘</div>
-            <h3 className="text-xl font-bold font-display mb-2">Emotional Regulation</h3>
-            <p className="text-zinc-500 dark:text-zinc-400">Integrated breathing exercises, emotion cards, and digital fidget tools help maintain focus and calm.</p>
+            <h3 className="text-xl font-bold font-display mb-2">Built-in Regulation</h3>
+            <p className="text-zinc-500 dark:text-zinc-400">Find peace when things get loud. Instant access to breathing guides and digital fidgets helps maintain focus.</p>
           </div>
-          <div className="p-8 rounded-3xl glass border-teal-100 dark:border-teal-900/30">
+          <div className="p-8 card-soft">
             <div className="text-4xl mb-4">🕹️</div>
-            <h3 className="text-xl font-bold font-display mb-2">Interactive Learning</h3>
-            <p className="text-zinc-500 dark:text-zinc-400">Structured games and scenario practices bridge the gap between structured communication and genuine connection.</p>
+            <h3 className="text-xl font-bold font-display mb-2">Practice Made Play</h3>
+            <p className="text-zinc-500 dark:text-zinc-400">Build conversation skills through play. Structured activities provide a safe space to practice communication without pressure.</p>
           </div>
         </div>
       </Container>

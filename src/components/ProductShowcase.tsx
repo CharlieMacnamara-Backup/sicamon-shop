@@ -3,23 +3,23 @@ import Image from "next/image";
 
 const featureBlocks = [
   {
-    title: 'Intuitive AAC Grid',
-    description: 'A highly customizable, core-vocabulary based grid designed to grow with the user. Easily personalize buttons with custom images, colors, and recorded speech.',
+    title: 'Core Vocabulary Grid',
+    description: 'Build a communication board that fits you. Add personal photos, choose comfortable colors, and record familiar voices to make every button your own.',
     imageSrc: '/assets/images/samples/aac-custom-form.png',
     imageAlt: 'AAC Custom Form Interface',
     align: 'right'
   },
   {
-    title: 'Emotional Regulation Tools',
-    description: 'Provide immediate support during moments of dysregulation. Built-in breathing exercises, emotion recognition cards, and digital fidget tools help users regain calm and focus.',
+    title: 'Tools for Calm and Focus',
+    description: 'Manage overwhelm the moment it happens. Access built-in breathing guides, emotion cards, and digital fidgets to regain focus and return to a calm state.',
     imageSrc: '/assets/images/samples/breathing-control.png',
     imageAlt: 'Breathing Control Interface',
     secondaryImages: ['/assets/images/samples/emotion card.png', '/assets/images/samples/fidget-nav.png'],
     align: 'left'
   },
   {
-    title: 'Gamified Social Learning',
-    description: 'Bridge the gap between communication and connection. Interactive games like Tic-Tac-Toe and Synonym matching provide structured environments for social interaction and language development.',
+    title: 'Interactive Practice',
+    description: 'Practice social interactions in a low-pressure environment. Play structured games like Tic-Tac-Toe to build confidence before real-world conversations.',
     imageSrc: '/assets/images/samples/tik-tak-toe.png',
     imageAlt: 'Tic-Tac-Toe Social Game',
     secondaryImages: ['/assets/images/samples/synonym.png'],
@@ -36,7 +36,7 @@ export function ProductShowcase() {
             More than just a voice.
           </h2>
           <p className="mt-4 text-lg text-zinc-500 dark:text-zinc-400">
-            Skillio merges advanced AAC functionality with actionable social skill coaching and emotional regulation tools, creating a holistic support system.
+            Communicate clearly and stay grounded. Skillio provides a customizable communication grid, instant emotional support tools, and interactive activities to help you navigate every interaction.
           </p>
         </div>
 
@@ -59,7 +59,8 @@ export function ProductShowcase() {
                 
                 <div className="relative">
                   {/* Primary Image */}
-                  <div className="rounded-2xl shadow-2xl ring-1 ring-zinc-900/10 overflow-hidden bg-white dark:bg-zinc-800">
+                  <div className="card-soft overflow-hidden p-2">
+                     <div className="rounded-[1.5rem] overflow-hidden">
                      <Image 
                         src={feature.imageSrc} 
                         alt={feature.imageAlt}
@@ -67,11 +68,13 @@ export function ProductShowcase() {
                         height={600}
                         className="w-full h-auto object-cover"
                      />
+                     </div>
                   </div>
                   
                   {/* Secondary Floating Images (if any) */}
                   {feature.secondaryImages && feature.secondaryImages.length > 0 && (
-                    <div className="absolute -bottom-6 -right-6 w-1/2 rounded-2xl shadow-2xl ring-1 ring-zinc-900/10 overflow-hidden bg-white dark:bg-zinc-800 transform rotate-3 hover:rotate-0 transition-transform duration-300 z-10 hidden sm:block">
+                    <div className="absolute -bottom-6 -right-6 w-1/2 card-soft overflow-hidden p-2 z-10 hidden sm:block">
+                      <div className="rounded-3xl overflow-hidden">
                       <Image 
                         src={feature.secondaryImages[0]} 
                         alt="Secondary feature"
@@ -79,10 +82,12 @@ export function ProductShowcase() {
                         height={300}
                         className="w-full h-auto object-cover"
                       />
+                      </div>
                     </div>
                   )}
                   {feature.secondaryImages && feature.secondaryImages.length > 1 && (
-                    <div className="absolute -top-6 -left-6 w-[40%] rounded-2xl shadow-xl ring-1 ring-zinc-900/10 overflow-hidden bg-white dark:bg-zinc-800 transform -rotate-6 hover:rotate-0 transition-transform duration-300 z-10 hidden sm:block">
+                    <div className="absolute -top-6 -left-6 w-[40%] card-soft overflow-hidden p-2 z-10 hidden sm:block">
+                      <div className="rounded-3xl overflow-hidden">
                       <Image 
                         src={feature.secondaryImages[1]} 
                         alt="Additional feature"
@@ -90,6 +95,7 @@ export function ProductShowcase() {
                         height={300}
                         className="w-full h-auto object-cover"
                       />
+                      </div>
                     </div>
                   )}
                 </div>

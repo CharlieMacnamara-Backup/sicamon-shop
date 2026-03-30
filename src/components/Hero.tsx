@@ -9,16 +9,16 @@ export function Hero() {
         <div className="lg:grid lg:grid-cols-12 lg:gap-8">
           <div className="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left">
             <h1>
-              <span className="block text-sm font-semibold tracking-wide text-indigo-600 uppercase dark:text-indigo-400 font-display">
-                Welcome to the future of AAC
+              <span className="block text-sm font-semibold tracking-wide text-teal-600 uppercase dark:text-teal-400 font-display">
+                Communicate Your Way
               </span>
               <span className="mt-1 block text-4xl tracking-tight font-extrabold sm:text-5xl xl:text-6xl font-display">
-                <span className="block text-zinc-900 dark:text-zinc-100">Empowering every</span>
-                <span className="block gradient-text">voice with Skillio</span>
+                <span className="block text-zinc-900 dark:text-zinc-100">Find your voice with</span>
+                <span className="block gradient-text">Skillio</span>
               </span>
             </h1>
             <p className="mt-3 text-base text-zinc-600 dark:text-zinc-400 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
-              Skillio combines advanced Augmentative and Alternative Communication (AAC) with interactive social skills training. Build confidence, foster connections, and communicate without limits.
+              Connect with the world on your terms. Skillio combines customizable communication boards with tools for emotional regulation and social practice, providing support for every interaction.
             </p>
             <div className="mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0">
               <div className="flex flex-col sm:flex-row gap-4">
@@ -33,10 +33,10 @@ export function Hero() {
           </div>
           <div className="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
              {/* Decorative blob background */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[120%] h-[120%] bg-indigo-500/10 blur-3xl rounded-full -z-10 animate-pulse" />
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[120%] h-[120%] bg-teal-500/10 blur-[100px] rounded-full -z-10" />
             
-            <div className="relative mx-auto w-full rounded-3xl shadow-2xl overflow-hidden glass border-white/20">
-              <div className="aspect-4/3 bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center">
+            <div className="relative mx-auto w-full card-soft overflow-hidden p-2">
+              <div className="aspect-4/3 bg-zinc-50 dark:bg-zinc-800/50 rounded-3xl flex items-center justify-center overflow-hidden">
                 {/* Actual app interface screenshot */}
                 <div className="relative w-full aspect-square md:aspect-auto md:h-full lg:aspect-square flex items-center justify-center p-4 sm:p-8">
                   <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-xl ring-1 ring-zinc-900/10">
