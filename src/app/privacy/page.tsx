@@ -6,27 +6,33 @@ export default function PrivacyPage() {
     <div className="relative isolate min-h-full">
       {/* Background decoration */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
-        <div className="absolute left-[50%] top-0 h-[800px] w-[800px] -translate-x-[50%] rounded-full bg-teal-500/5 blur-3xl" />
+        <div className="absolute left-[50%] top-0 h-[800px] w-[800px] -translate-x-[50%] rounded-full bg-teal-500/10 blur-3xl" />
+        <div className="absolute right-0 top-0 h-[600px] w-[600px] bg-sky-500/5 blur-3xl rounded-full" />
       </div>
 
-      <Container className="mt-32 pb-24">
+      <Container className="pt-32 pb-24 lg:pt-48 lg:pb-32">
         <div className="max-w-3xl">
           <Link 
             href="/" 
-            className="group mb-8 inline-flex items-center gap-2 text-sm font-semibold text-zinc-500 hover:text-teal-600 transition-colors"
+            className="group mb-12 inline-flex items-center gap-2 text-sm font-semibold text-zinc-500 hover:text-teal-600 transition-colors"
           >
             <span className="group-hover:-translate-x-1 transition-transform">←</span>
             Back to Home
           </Link>
 
-          <h1 className="text-4xl font-bold font-display tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl mb-4">
-            Privacy Policy
-          </h1>
-          <p className="text-zinc-500 dark:text-zinc-400 font-medium mb-12">
-            Last updated: March 30, 2026
-          </p>
+          <header className="mb-16">
+            <h1 className="text-4xl font-bold font-display tracking-tight text-zinc-900 dark:text-zinc-100 sm:text-5xl lg:text-6xl mb-6">
+              Privacy Policy
+            </h1>
+            <p className="text-xl text-zinc-500 dark:text-zinc-400 font-medium max-w-2xl">
+              We believe communication is a fundamental right. We protect your data as fiercely as we champion your voice.
+            </p>
+            <div className="mt-8 flex items-center gap-2 text-sm text-zinc-400 dark:text-zinc-500 bg-white/50 dark:bg-zinc-900/50 w-fit px-4 py-2 rounded-full border border-zinc-100 dark:border-zinc-800 backdrop-blur-sm">
+               <span>Effective: March 30, 2026</span>
+            </div>
+          </header>
 
-          <div className="prose prose-zinc dark:prose-invert max-w-none prose-headings:font-display prose-headings:font-bold prose-h2:text-teal-600 dark:prose-h2:text-teal-400">
+          <div className="prose prose-zinc dark:prose-invert max-w-none prose-headings:font-display prose-headings:font-bold prose-h2:text-teal-600 dark:prose-h2:text-teal-500 prose-h2:mt-12 prose-h2:mb-6 prose-p:leading-relaxed prose-p:text-zinc-600 dark:prose-p:text-zinc-400">
             <h2>1. Data Collection</h2>
             <p>
               Skillio is designed with privacy at its core. We understand the sensitive nature of communication data and implement strict protocols to ensure your information remains yours. We do not sell, rent, or trade your personal communication data with third parties.
@@ -59,7 +65,7 @@ export default function PrivacyPage() {
 
             <h2>7. Contact Us</h2>
             <p>
-              For any privacy-related inquiries, please reach out directly to our team at <span className="text-teal-600 dark:text-teal-400 font-medium">privacy@skillio.com</span>.
+              For any privacy-related inquiries, please reach out directly to our team at <span className="text-teal-600 dark:text-teal-500 font-medium underline decoration-teal-500/20 underline-offset-4">privacy@skillio.com</span>.
             </p>
           </div>
         </div>
