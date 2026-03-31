@@ -3,7 +3,7 @@ import fs from 'fs';
 import path from 'path';
 
 /**
- * Skillio 10x Declarative Production Audit [Next.js 16 LTS Native]
+ * Skillio Site Production Audit [Next.js 16 LTS Native]
  * This script uses a declarative rule registry to audit the codebase for 
  * production readiness, accessibility, and architectural compliance.
  */
