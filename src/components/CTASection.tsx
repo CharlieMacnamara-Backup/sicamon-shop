@@ -23,7 +23,7 @@ export function CTASection() {
             Communicate on your terms.
           </h2>
           <p className="mt-4 text-lg leading-6 text-indigo-100">
-            Communicate with confidence. Join thousands of users on Skillio. Lifetime access for £30.
+            Communicate with confidence. Join thousands of users. Lifetime access for £30.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link 

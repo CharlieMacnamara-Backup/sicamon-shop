@@ -4,7 +4,7 @@ import Image from "next/image";
 const featureBlocks = [
   {
     title: 'Your Voice, Your Way',
-    description: 'Build sentences with a tap. Choose icons that match your thoughts. Customize your grid and expand your vocabulary on the fly.',
+    description: 'Speak your mind. Build sentences with a tap. Select from customizable symbol grids and expand your vocabulary on the fly.',
     imageSrc: '/assets/images/samples/aac.png',
     imageAlt: 'Skillio AAC Communication Board with customizable grid and symbol support',
     secondaryImages: ['/assets/images/samples/aac-custom-form.png', '/assets/images/samples/synonym.png'],
@@ -12,7 +12,7 @@ const featureBlocks = [
   },
   {
     title: 'Master Breath',
-    description: 'Follow the motion. Calm the mind and find focus. Integrated breathing patterns and digital fidgets for instant support.',
+    description: 'Find calm. Follow the motion. Use digital fidgets and breathing guides to stay focused and center your thoughts.',
     imageSrc: '/assets/images/samples/breathing-control.png',
     imageAlt: 'Skillio Breathing Control Visual Tool for sensory regulation',
     secondaryImages: ['/assets/images/samples/fidget-nav.png'],
@@ -20,7 +20,7 @@ const featureBlocks = [
   },
   {
     title: 'Step into the Frame',
-    description: 'Align your reflection. Express yourself and see the match. Interactive cards for identifying and sharing feelings.',
+    description: 'Match the moment. Align your reflection. Interactive cards for identifying and sharing feelings in a safe space.',
     imageSrc: '/assets/images/samples/emotion card.png',
     imageAlt: 'Skillio Emotion Cards Interface showing interactive social practice',
     secondaryImages: [],
@@ -28,7 +28,7 @@ const featureBlocks = [
   },
   {
     title: 'Master the Studio',
-    description: 'Capture and refine. Use the Echo Studio to break down tricky phrases and master your voice, step by step.',
+    description: 'Refine your voice. Capture and play back with Echo Studio. Master difficult phrases step by step.',
     imageSrc: '/assets/images/samples/studio.png',
     imageAlt: 'Skillio Echo Studio Recording and Voice Analysis Interface',
     secondaryImages: [],
@@ -36,7 +36,7 @@ const featureBlocks = [
   },
   {
     title: 'Outsmart the Play',
-    description: 'Take turns and build strategies. Practice social interaction in a structured, competitive, and safe space.',
+    description: 'Play for connection. Take turns and build social strategies through shared games and activities.',
     imageSrc: '/assets/images/samples/tik-tak-toe.png',
     imageAlt: 'Tik-Tac-Toe Interactive Game',
     secondaryImages: [],

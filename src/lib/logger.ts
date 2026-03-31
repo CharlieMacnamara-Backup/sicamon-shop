@@ -14,7 +14,7 @@ export const logger = {
     console.warn(`[STATE] [${component}] Changed from:`, from, "to:", to);
   },
   
-  logResource: (resource: string, status: 'mounted' | 'disposed') => {
+  logResource: (resource: string, status: string) => {
     console.warn(`[RESOURCE] [${resource}] ${status.toUpperCase()}`);
   }
 };
