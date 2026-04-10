@@ -2,7 +2,7 @@ import { createRequire } from "module";
 const require = createRequire(import.meta.url);
 
 /**
- * Skillio Hardened Flat Config [Next.js 16 LTS Native - FINAL]
+ * Sicamon Hardened Flat Config [Next.js 16 LTS Native - FINAL]
  * Hardened for robust "app-wide" code audit without circular structure bugs.
  */
 
@@ -14,9 +14,9 @@ const eslintConfig = [
   // 1. Core Next.js Best Practices
   ...nextConfigArr,
 
-  // 2. Skillio Hardened App-Wide Rules
+  // 2. Sicamon Hardened App-Wide Rules
   {
-    name: "skillio/hardened-rules",
+    name: "sicamon/hardened-rules",
     files: ["src/**/*.{ts,tsx,js,jsx}"],
     rules: {
       // Enhanced Branding & Performance
@@ -27,7 +27,7 @@ const eslintConfig = [
       "@typescript-eslint/no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
       "no-console": ["warn", { "allow": ["warn", "error"] }],
       
-      // Ensure specific Skillio naming conventions if needed
+      // Ensure specific Sicamon naming conventions if needed
     }
   },
 

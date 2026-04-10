@@ -1,0 +1,193 @@
+{
+  "Common": {
+    "loading": "Loading Sicamon...",
+    "error": "A touch of chaos occurred",
+    "loadingDocument": "Preparing document for your review..."
+  },
+  "ThemeToggle": {
+    "themeToggle": {
+      "light": "Switch to light mode",
+      "dark": "Switch to dark mode"
+    }
+  },
+  "Header": {
+    "logoAlt": "Sicamon Logo",
+    "nav": {
+      "shop": "Tufted Rugs",
+      "contact": "Contact & Studio"
+    }
+  },
+  "Hero": {
+    "badge": "Est. Autumn 2024",
+    "titlePrefix": "Hand-Tufted Art",
+    "titleSuffix": "From Any Vision*",
+    "description": "Hello art enjoyers. This is my path away from screens and doomscrolling—satisfying a yearning for arts and crafts while I capitalise on the decades of hand-to-eye coordination I’ve honed playing maddening platform games.",
+    "cta": {
+      "gallery": "The Gallery",
+      "contact": "Commission a Piece"
+    },
+    "footer": "All rugs are unique 1-of-1 creations. Studio handcrafted quality.",
+    "imageAlt": "Sicamon Studio Setup"
+  },
+  "CTASection": {
+    "title": "Secure Your Vision",
+    "description": "Whether it's a cherished memory, a favorite character, or an original artwork — let's transform it into a statement piece for your collection.",
+    "cta": {
+      "gallery": "Back to Archive",
+      "contact": "Message the Studio"
+    },
+    "footer": "Boutique Quality • Handcrafted in Scotland"
+  },
+  "Shop": {
+    "title": "Current Gallery",
+    "description": "Available textile art from the current drop. For custom commission requests, please visit the Studio page. Use code sicamon at checkout for 15% curated discount.",
+    "pricing": {
+      "title": "Collection Info & Sizing",
+      "details": "Pricing is generally £20-40 per square foot depending on detail, with wiggle room for custom budgets. Standard max is 36\" x 54\". Use code sicamon for curated themes."
+    },
+    "details": {
+      "cta": "Acquire Piece"
+    },
+    "items": {
+      "awaitingImage": "Awaiting Presentation",
+      "archived": "Archived",
+      "oneOfAKind": "1-of-1",
+      "sold": "Sold",
+      "buyNow": "Buy Now",
+      "securing": "Securing...",
+      "outOfStock": "Out of Stock",
+      "dimensions": "Dimensions",
+      "viewProcess": "View Process",
+      "closeGallery": "Exit Gallery",
+      "defaultDescription": "Unique hand-tufted rug from my collection.",
+      "curatorHint": "Use code sicamon at checkout to apply 15% curator discount on this piece."
+    },
+    "empty": {
+      "title": "The Loom is Currently Silent",
+      "description": "Every museum-grade piece in the boutique is a unique, hand-tufted creation. The studio is currently preparing the next limited drop.",
+      "cta": "Request Commission"
+    }
+  },
+  "Contact": {
+    "title": "Studio & Commissions",
+    "intro": "Thanks for visiting the studio. Contact me at amonsic@hotmail.com with any commission requests or to get a quote.",
+    "sendEmail": "Message",
+    "discounts": {
+      "title": "Special Collections",
+      "subtitle": "Currently offering a 15% discount on pieces themed around the following curated aesthetics:",
+      "content": "Apply code sicamon for 15% off themes like: Over the Garden Wall, Gurren Lagann, Kill la Kill, Thundercats, Studio Ghibli, SpongeBob Squarepants, Zelda: Wind Waker, Looney Tunes, & the art of Max Fleischer, Richard Scarry or Mike Mignola."
+    },
+    "care": {
+      "title": "Rug Care Guide",
+      "maintenance": "Maintenance",
+      "placement": "Placement",
+      "cleaning": "Cleaning",
+      "tip1": "Clean the rug regularly – it’s handmade and will molt a little, so vacuum at least once a week. Loose threads are normal and can be trimmed with scissors.",
+      "tip2": "Best for curated decoration rather than high-traffic areas. This is art for your floor, not hard-wearing protection.",
+      "tip3": "If stained, use a soft bristle brush with warm water and detergent, then air dry. Never machine wash as some threads will detach."
+    },
+    "footer": "Bespoke Textiles • Handcrafted in the UK",
+    "studioLabel": "Hand-tufted bespoke art, handcrafted from my studio."
+  },
+  "Footer": {
+    "logoAlt": "Sicamon Logo",
+    "description": "Handcrafted tufted rugs. 1-of-1 creations made with passion and precision.",
+    "columns": {
+      "nav": "Navigation",
+      "legal": "Legal"
+    },
+    "links": {
+      "shop": "Rug Gallery",
+      "contact": "The Studio",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service"
+    },
+    "copyright": "© 2026 Sicamon Customs. All rights reserved."
+  },
+  "Privacy": {
+    "back": "Return to Home",
+    "title": "Privacy Protocol",
+    "subtitle": "How personal data and artistic commissions are protected within the secure boutique infrastructure.",
+    "effective": "Effective: April 2026",
+    "sections": {
+      "collection": {
+        "title": "1. Data Acquisition",
+        "content": "The studio only collects essential information required to fulfill bespoke commissions and manage the secure checkout session."
+      },
+      "personal": {
+        "title": "2. Personal Insight",
+        "content": "Your name, email, and shipping address are held with the strictest confidentiality via a Stripe-integrated CRM."
+      },
+      "usage": {
+        "title": "3. Artistic Usage",
+        "content": "Commissioned designs are archived for historical studio records unless explicitly requested otherwise by the collector."
+      },
+      "security": {
+        "title": "4. Secure Vaulting",
+        "content": "All transaction data is encrypted and vaulted using industry-standard 256-bit protocols."
+      },
+      "rights": {
+        "title": "5. Collector Rights",
+        "content": "You maintain full authority over your personal data and can request an archive purge at any moment."
+      },
+      "thirdParty": {
+        "title": "6. Studio Partners",
+        "content": "Data is never sold. Information is only shared with essential fulfillment partners like Stripe and courier services."
+      },
+      "contact": {
+        "title": "7. Studio Inquiry",
+        "content": "For privacy-related questions, please message amonsic@hotmail.com directly."
+      }
+    }
+  },
+  "Terms": {
+    "back": "Return to Home",
+    "title": "Studio Agreements",
+    "subtitle": "The formal governing framework for acquiring pieces from the Sicamon collection.",
+    "revised": "Revised: April 2026",
+    "sections": {
+      "acceptance": {
+        "title": "1. Acquisition Terms",
+        "content": "By commissioning or acquiring a piece, you enter into a formal agreement with Sicamon."
+      },
+      "service": {
+        "title": "2. The Craft",
+        "content": "Every piece is a unique 1-of-1 creation. Natural variations and hand-tufted nuances are part of the artistic value."
+      },
+      "responsibilities": {
+        "title": "3. Collector Responsibility",
+        "content": "Collectors are responsible for providing accurate commission details and shipping information."
+      },
+      "intellectual": {
+        "title": "4. Artistic Property",
+        "content": "Sicamon retains the artistic copyright for all original designs, even after acquisition by a collector."
+      },
+      "liability": {
+        "title": "5. Studio Liability",
+        "content": "Studio liability is limited to the acquisition price of the piece. I am not responsible for wear resulting from high-traffic environments."
+      },
+      "law": {
+        "title": "6. Governing Jurisdiction",
+        "content": "These terms are governed by the laws of the United Kingdom."
+      },
+      "contact": {
+        "title": "7. Formal Engagement",
+        "content": "For legal inquiries or term clarifications, contact amonsic@hotmail.com."
+      }
+    }
+  },
+  "Return": {
+    "errorTitle": "Something went wrong",
+    "errorSubtitle": "Session information could not be retrieved.",
+    "pendingTitle": "Acquisition in Progress",
+    "pendingSubtitle": "Your secure transaction is being processed. Please wait a moment.",
+    "successTitle": "Mission Accomplished",
+    "successSubtitle": "Order received! Please check your email inbox at",
+    "successTip": "A receipt has been sent. A tracking link will follow via email as soon as the piece is dispatched.",
+    "summaryTitle": "Collection Summary",
+    "orderId": "Transaction ID",
+    "totalPaid": "Total Secured",
+    "backBtn": "Return to Gallery",
+    "status": "Session Status"
+  }
+}

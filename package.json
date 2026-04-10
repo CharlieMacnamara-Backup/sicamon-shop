@@ -1,39 +1,44 @@
 {
-  "name": "skillio-app",
+  "name": "sicamon-shop",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint",
-    "cf-build": "opennextjs-cloudflare",
+    "lint": "next lint",
     "verify": "node scripts/verify.mjs",
-    "prepare": "husky"
+    "prepare": "husky",
+    "stripe:listen": "stripe listen --forward-to localhost:3000/api/webhook",
+    "stripe:trigger": "stripe trigger checkout.session.completed --api-key $STRIPE_SECRET_KEY"
   },
   "dependencies": {
+    "@stripe/react-stripe-js": "^6.1.0",
+    "@stripe/stripe-js": "^9.1.0",
     "@tailwindcss/typography": "^0.5.19",
     "clsx": "^2.1.1",
     "lucide-react": "^1.7.0",
-    "next": "^16.2.1",
+    "next": "16.2.1",
+    "next-intl": "^4.8.3",
     "next-themes": "^0.4.6",
     "react": "19.2.4",
     "react-dom": "19.2.4",
-    "tailwind-merge": "^3.5.0"
+    "stripe": "22.0.1",
+    "tailwind-merge": "^3.5.0",
+    "zod": "^4.3.6"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.5",
-    "@opennextjs/cloudflare": "^1.18.0",
-    "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
+    "@tailwindcss/node": "^4.2.2",
+    "@tailwindcss/postcss": "^4.2.2",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "enhanced-resolve": "^5.20.1",
     "eslint": "^9",
-    "eslint-config-next": "^16.2.1",
+    "eslint-config-next": "16.2.1",
     "husky": "^9.1.7",
-    "tailwindcss": "^4",
+    "tailwindcss": "4.0.0",
     "typescript": "^5",
-    "vercel": "^50.37.3",
-    "wrangler": "^4.78.0"
+    "vercel": "^50.37.3"
   }
 }

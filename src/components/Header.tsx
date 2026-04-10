@@ -1,60 +1,51 @@
 "use client";
 
-import Link from "next/link";
-import Image from "next/image";
+import { Link } from "@/i18n/routing";
 import * as React from "react";
-import { Container } from "./Container";
+import { Container } from "./ui/Container";
 import { ThemeToggle } from "./ThemeToggle";
 import { cn } from "@/lib/utils";
-import { logger } from "@/lib/logger";
+import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 export function Header() {
-  React.useEffect(() => {
-    logger.logResource("Header", "mounted");
-    return () => logger.logResource("Header", "disposed");
-  }, []);
+  const t = useTranslations("Header");
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 flex flex-none flex-col">
       <div className="h-20 pt-6">
         <Container className="pointer-events-auto">
           <div className={cn(
-            "flex gap-4 items-center glass rounded-full px-4 pr-2 pl-6 py-2",
-            "bg-white/80 dark:bg-zinc-900/80 backdrop-blur-md"
+            "flex gap-4 items-center glass rounded-full px-4 sm:px-6 pr-1.5 sm:pr-2 pl-5 sm:pl-8 py-2.5 sm:py-3",
+            "bg-white/70 dark:bg-zinc-900/40 backdrop-blur-xl border border-white/20 dark:border-zinc-800/50 shadow-2xl"
           )}>
             <div className="flex flex-1">
               <Link 
                 href="/" 
-                className="flex items-center gap-3 group"
-                onClick={() => logger.logEvent("Header", "Logo clicked")}
+                className="flex items-center gap-2 sm:gap-3 group"
               >
-                <div className="relative h-10 w-10 flex items-center justify-center rounded-xl bg-teal-50 dark:bg-teal-900/30 overflow-hidden shadow-sm group-hover:scale-110 transition-all duration-300">
+                <div className="relative h-12 w-12 sm:h-18 sm:w-18 flex items-center justify-center overflow-hidden transition-all duration-500 transform group-hover:scale-110">
                   <Image 
-                    src="/assets/images/intro-icon-square.png" 
-                    alt="Skillio Logo" 
-                    width={40} 
-                    height={40}
-                    sizes="40px"
-                    className="object-contain"
+                    src="/assets/images/logo.png" 
+                    alt={t("logoAlt")} 
+                    fill
+                    sizes="(max-width: 768px) 48px, 72px"
+                    className="object-contain dark:invert dark:drop-shadow-[0_0_12px_rgba(255,255,255,0.4)] transition-all duration-500"
                   />
                 </div>
-                <span className="text-xl font-bold font-display text-zinc-900 dark:text-white tracking-tight">
-                  Skillio
-                </span>
               </Link>
             </div>
             
             <div className="flex flex-1 justify-center">
               <nav className="hidden md:block">
                 <ul className="flex gap-1 text-sm font-medium text-zinc-800 dark:text-zinc-200">
-                  <NavItem href="/#how-it-works">How it Works</NavItem>
-                  <NavItem href="/#features">Features</NavItem>
-                  <NavItem href="/#get-started">Pricing</NavItem>
+                  <NavItem href="/">{t("nav.shop")}</NavItem>
+                  <NavItem href="/contact">{t("nav.contact")}</NavItem>
                 </ul>
               </nav>
             </div>
 
-            <div className="flex justify-end items-center flex-1 gap-4">
+            <div className="flex justify-end items-center flex-1 gap-2 sm:gap-4">
                <ThemeToggle />
             </div>
           </div>
@@ -69,8 +60,7 @@ function NavItem({ href, children }: { href: string; children: React.ReactNode }
     <li>
       <Link
         href={href}
-        className="relative block px-3 py-2 transition hover:text-teal-600 dark:hover:text-teal-400"
-        onClick={() => logger.logEvent("Header", `NavItem clicked: ${href}`)}
+        className="relative block px-3 py-2 transition hover:text-zinc-500 dark:hover:text-zinc-400"
       >
         {children}
       </Link>

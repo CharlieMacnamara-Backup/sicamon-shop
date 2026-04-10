@@ -1,6 +1,6 @@
-# Skillio Marketing Site
+# Sicamon Marketing Site
 
-Premium marketing website for the Skillio AAC application. Built with Next.js 16 LTS, Tailwind CSS 4, and next-themes.
+Premium marketing website for the Sicamon Shop. Built with Next.js 16 LTS, Tailwind CSS 4, and next-themes.
 
 ## Development
 
