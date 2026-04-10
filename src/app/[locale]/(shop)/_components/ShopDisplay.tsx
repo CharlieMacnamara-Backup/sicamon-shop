@@ -140,26 +140,24 @@ export function ShopDisplay({ products }: ShopDisplayProps) {
 
               {/* Content */}
               <div className="p-8 sm:p-10 flex flex-col flex-1">
-                <div className="flex flex-col gap-1 sm:gap-1 w-full text-center md:text-left mb-4 sm:mb-6 min-h-[90px] justify-center">
-                  <h3 className="text-2xl font-display font-medium text-zinc-900 dark:text-white group-hover:text-zinc-500 transition-colors mb-2 sm:mb-3 tracking-tighter line-clamp-2 leading-tight">
+                <div className="flex flex-col gap-1 sm:gap-1 w-full text-center md:text-left mb-6 sm:mb-8 min-h-[140px]">
+                  <h3 className="text-2xl font-display font-medium text-zinc-900 dark:text-white group-hover:text-zinc-500 transition-colors mb-4 tracking-tighter line-clamp-2 leading-tight">
                     {product.name}
                   </h3>
-                  <div className="flex flex-col items-center md:items-start gap-1 sm:gap-1">
-                    <span className="text-[10px] font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-[0.3em] mb-4 sm:mb-4 flex items-center justify-center md:justify-start gap-3 sm:gap-3">
-                      <span className="w-8 h-px bg-zinc-200 dark:bg-zinc-800" />
-                      Sicamon Customs
-                    </span>
-                    <div className="flex flex-col items-center md:items-start gap-1 sm:gap-1">
+                    <div className="flex flex-col items-center md:items-start gap-1 sm:gap-1 min-h-[60px] justify-start">
                       {product.metadata.discount_eligible === 'true' && !isSoldOut && price ? (
                         <>
-                          <span className="text-sm font-display italic text-zinc-400 line-through">
+                          <span className="text-sm font-display italic text-zinc-400 line-through leading-none">
                             {priceString}
                           </span>
-                          <span className="text-2xl font-display italic text-zinc-900 dark:text-white">
+                          <span className="text-2xl font-display italic text-zinc-900 dark:text-white leading-tight">
                             {new Intl.NumberFormat('en-GB', {
                               style: 'currency',
                               currency: price.currency.toUpperCase(),
                             }).format((price.unit_amount * 0.85) / 100)}
+                          </span>
+                          <span className="mt-1 px-2 py-0.5 bg-zinc-50 dark:bg-zinc-950/30 text-teal-600 dark:text-teal-400 text-[9px] font-bold uppercase tracking-widest rounded border border-zinc-100 dark:border-zinc-900/50">
+                            Use code: sicamon
                           </span>
                         </>
                       ) : (
@@ -170,14 +168,8 @@ export function ShopDisplay({ products }: ShopDisplayProps) {
                           {priceString}
                         </span>
                       )}
-                      {!isSoldOut && price && product.metadata.discount_eligible === 'true' && (
-                        <span className="px-2 py-0.5 bg-zinc-50 dark:bg-zinc-950/30 text-teal-600 dark:text-teal-400 text-[9px] font-bold uppercase tracking-widest rounded border border-zinc-100 dark:border-zinc-900/50">
-                          Use code: sicamon
-                        </span>
-                      )}
                     </div>
                   </div>
-                </div>
                 
                 <p className="text-sm text-zinc-500 dark:text-zinc-400 line-clamp-3 mb-8 sm:mb-10 min-h-[110px] leading-relaxed italic font-serif text-center flex-1">
                   {product.description || t("items.defaultDescription")}

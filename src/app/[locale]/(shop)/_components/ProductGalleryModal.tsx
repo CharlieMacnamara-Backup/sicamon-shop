@@ -198,10 +198,6 @@ export function ProductGalleryModal({ product, isOpen, onClose, onBuyNow }: Prod
 
           <div className="p-10 sm:p-12 lg:p-16 flex flex-col min-h-full">
             <div className="flex flex-col mb-10 sm:mb-10 text-center md:text-left">
-              <span className="text-[10px] font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-[0.3em] mb-4 sm:mb-4 flex items-center justify-center md:justify-start gap-3 sm:gap-3">
-                <span className="w-8 h-px bg-zinc-200 dark:bg-zinc-800" />
-                Sicamon Customs
-              </span>
               <h2 className="text-4xl lg:text-5xl font-display font-medium text-zinc-900 dark:text-white mb-6 sm:mb-6 tracking-tight italic leading-none">
                 {product.name}
               </h2>
