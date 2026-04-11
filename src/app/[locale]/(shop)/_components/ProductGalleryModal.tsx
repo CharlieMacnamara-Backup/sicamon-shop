@@ -1,9 +1,10 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useLayoutEffect } from 'react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { RugVideoPlayer } from './RugVideoPlayer';
+import { normalizeImageUrl } from '@/utils/assets';
 
 /**
  * Atelier Product Definition
@@ -45,21 +46,28 @@ export function ProductGalleryModal({ product, isOpen, onClose, onBuyNow }: Prod
   const t = useTranslations("Shop");
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  // Lock scroll and handle keyboard navigation
-  useEffect(() => {
+  // Museum-Grade Scroll Lock Protocol & Navigation (React 19)
+  useLayoutEffect(() => {
+    if (!isOpen) return;
+
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') onClose();
     };
 
-    if (isOpen) {
-      document.body.style.overflow = 'hidden';
-      window.addEventListener('keydown', handleKeyDown);
-    } else {
-      document.body.style.overflow = 'unset';
+    // Save original manifest to prevent protocol drift
+    const originalStyle = window.getComputedStyle(document.body).overflow;
+    const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+
+    document.body.style.overflow = 'hidden';
+    if (scrollbarWidth > 0) {
+      document.body.style.paddingRight = `${scrollbarWidth}px`;
     }
-    
-    return () => { 
-      document.body.style.overflow = 'unset';
+
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = originalStyle;
+      document.body.style.paddingRight = '0px';
       window.removeEventListener('keydown', handleKeyDown);
     };
   }, [isOpen, onClose]);
@@ -77,6 +85,7 @@ export function ProductGalleryModal({ product, isOpen, onClose, onBuyNow }: Prod
     : 'Price on Request';
 
   const images = product.images.length > 0 ? product.images : ['/placeholder-rug.jpg'];
+
 
   const nextImage = () => setCurrentImageIndex((prev) => (prev + 1) % images.length);
   const prevImage = () => setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
@@ -101,15 +110,15 @@ export function ProductGalleryModal({ product, isOpen, onClose, onBuyNow }: Prod
       </button>
 
       {/* Museum Central Segment - Adaptive Sizing for 10x Audit Compliance */}
-      <div className="relative w-full h-full md:max-w-6xl md:max-h-[85vh] bg-white dark:bg-zinc-900 md:rounded-[3rem] shadow-3xl overflow-hidden flex flex-col md:flex-row border border-white/5 animate-in fade-in zoom-in duration-500">
+      <div className="relative w-full h-[100dvh] md:h-full md:max-w-6xl md:max-h-[85vh] bg-white dark:bg-zinc-900 md:rounded-[3rem] shadow-3xl overflow-y-auto md:overflow-hidden flex flex-col md:flex-row border border-white/5 animate-in fade-in zoom-in duration-500 custom-scrollbar">
         
         {/* Gallery Content Segment: Carousel & Process Insights */}
-        <div className="w-full md:w-[60%] h-full overflow-y-auto custom-scrollbar bg-zinc-50 dark:bg-black/20">
+        <div className="w-full md:w-[60%] h-auto md:h-full md:overflow-y-auto custom-scrollbar bg-zinc-50 dark:bg-black/20">
           <div className="flex flex-col gap-1 sm:gap-1 w-full text-center md:text-left">
             {/* Visual Art Showcase */}
             <div className="relative aspect-4/5 w-full bg-zinc-50 dark:bg-black/50 overflow-hidden group">
               <Image
-                src={images[currentImageIndex]}
+                src={normalizeImageUrl(images[currentImageIndex]) || ''}
                 alt={product.name}
                 fill
                 className="object-cover transition-all duration-1000 ease-out"
@@ -163,7 +172,7 @@ export function ProductGalleryModal({ product, isOpen, onClose, onBuyNow }: Prod
             </div>
 
             {/* Video Process Section (Clear Separation) */}
-            {product.metadata.tiktok_link && (
+            {(product.metadata.tiktok_link || product.metadata.video_link) && (
               <div className="p-8 sm:p-12 lg:p-16 bg-white dark:bg-zinc-900/50 border-t border-zinc-100 dark:border-zinc-800/80">
                 <div className="flex items-center gap-4 sm:gap-4 mb-10 sm:mb-10">
                   <div className="h-px flex-1 bg-zinc-100 dark:bg-zinc-800" />
@@ -176,7 +185,7 @@ export function ProductGalleryModal({ product, isOpen, onClose, onBuyNow }: Prod
                 <div className="max-w-md mx-auto">
                   <RugVideoPlayer 
                     productId={product.id} 
-                    videoUrl={product.metadata.tiktok_link} 
+                    videoUrl={product.metadata.tiktok_link || product.metadata.video_link || ''} 
                   />
                 </div>
               </div>
@@ -185,7 +194,7 @@ export function ProductGalleryModal({ product, isOpen, onClose, onBuyNow }: Prod
         </div>
 
         {/* Focus Segment: Details, Authenticity & Fulfillment */}
-        <div className="w-full md:w-[40%] flex flex-col bg-white dark:bg-zinc-900 border-l border-zinc-50 dark:border-zinc-800/50 custom-scrollbar overflow-y-auto">
+        <div className="w-full md:w-[40%] flex flex-col h-auto md:h-full bg-white dark:bg-zinc-900 border-l border-zinc-50 dark:border-zinc-800/50 md:custom-scrollbar md:overflow-y-auto">
           {/* Mobile Overlay Exit Trigger */}
           <button 
             onClick={onClose}

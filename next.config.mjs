@@ -14,7 +14,15 @@ const nextConfig = {
       },
       {
         protocol: 'https',
+        hostname: 'b.stripecdn.com',
+      },
+      {
+        protocol: 'https',
         hostname: 'sicamon.com',
+      },
+      {
+        protocol: 'http',
+        hostname: 'www.sicamon.com',
       },
       {
         protocol: 'https',

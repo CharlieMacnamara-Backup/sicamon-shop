@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { RugCheckout } from './RugCheckout';
 import { useTranslations } from 'next-intl';
 import { ProductGalleryModal } from './ProductGalleryModal';
+import { normalizeImageUrl } from '@/utils/assets';
 
 interface Product {
   id: string;
@@ -99,16 +100,16 @@ export function ShopDisplay({ products }: ShopDisplayProps) {
           return (
             <div 
               key={product.id} 
-              className="group flex flex-col h-full w-full overflow-hidden bg-white dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-800 hover:shadow-xl transition-all duration-500 rounded-[2.5rem]"
+              className="group flex flex-col h-full w-full overflow-hidden bg-white dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-800 hover:shadow-xl transition-all duration-500 rounded-[2.5rem] cursor-pointer"
+              onClick={() => handleOpenGallery(product)}
             >
               {/* Image Container - Expanded Click Target */}
               <div 
-                className="relative aspect-4/5 group/card overflow-hidden bg-zinc-50 dark:bg-zinc-800/20 cursor-zoom-in"
-                onClick={() => handleOpenGallery(product)}
+                className="relative aspect-4/5 group/card overflow-hidden bg-zinc-50 dark:bg-zinc-800/20"
               >
                 {product.images?.[0] ? (
                   <Image
-                    src={product.images[0]}
+                    src={normalizeImageUrl(product.images[0]) || ''}
                     alt={product.name}
                     fill
                     className={`object-cover transition-transform duration-700 group-hover:scale-105 ${isSoldOut ? 'opacity-80' : ''}`}
@@ -180,12 +181,16 @@ export function ShopDisplay({ products }: ShopDisplayProps) {
                     <button 
                       disabled
                       className="w-full py-4 sm:py-5 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-400 dark:text-zinc-600 font-bold text-xs cursor-not-allowed uppercase tracking-widest"
+                      onClick={(e) => e.stopPropagation()}
                     >
                       {!price?.id && !isSoldOut ? t("items.awaitingImage") : t("items.sold")}
                     </button>
                   ) : (
                     <button 
-                      onClick={() => handleBuyNow(price.id)}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        handleBuyNow(price.id);
+                      }}
                       disabled={isCreatingSession}
                       className={`w-full btn-premium py-4 sm:py-5 ${isCreatingSession ? 'opacity-70 cursor-wait' : ''}`}
                     >
