@@ -13,7 +13,11 @@ const nextConfig = {
         hostname: 'files.stripe.com',
       },
       {
-        protocol: 'http',
+        protocol: 'https',
+        hostname: 'sicamon.com',
+      },
+      {
+        protocol: 'https',
         hostname: 'www.sicamon.com',
       }
     ],
