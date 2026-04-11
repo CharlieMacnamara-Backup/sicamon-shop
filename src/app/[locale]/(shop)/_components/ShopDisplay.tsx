@@ -85,7 +85,7 @@ export function ShopDisplay({ products }: ShopDisplayProps) {
 
   return (
     <>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16 px-4 md:px-8 max-w-7xl mx-auto">
+      <div className="grid grid-cols-2 lg:grid-cols-3 gap-x-3 gap-y-8 sm:gap-x-8 sm:gap-y-16 px-2 sm:px-4 md:px-8 max-w-7xl mx-auto">
         {sortedProducts.map((product) => {
           const price = product.default_price;
           const isSoldOut = product.metadata.available !== 'true' || !product.active;
@@ -124,13 +124,13 @@ export function ShopDisplay({ products }: ShopDisplayProps) {
 
                 {/* Identity Strip: Horizontal Symmetry */}
                 {product.metadata.one_of_a_kind === 'true' && (
-                  <div className={`absolute top-6 left-4 sm:top-8 sm:left-8 border border-zinc-900 dark:border-white ${isSoldOut ? 'bg-zinc-900 text-white border-none' : 'bg-white/90 dark:bg-zinc-900/90 text-zinc-900 dark:text-white'} backdrop-blur px-3 py-1.5 sm:px-6 sm:py-2.5 rounded-full text-[9px] sm:text-[10px] font-bold uppercase tracking-widest z-20 shadow-lg pointer-events-none whitespace-nowrap`}>
+                  <div className={`absolute top-3 left-3 sm:top-8 sm:left-8 border border-zinc-900 dark:border-white ${isSoldOut ? 'bg-zinc-900 text-white border-none' : 'bg-white/90 dark:bg-zinc-900/90 text-zinc-900 dark:text-white'} backdrop-blur px-2 py-1 sm:px-6 sm:py-2.5 rounded-full text-[8px] sm:text-[10px] font-bold uppercase tracking-widest z-20 shadow-lg pointer-events-none whitespace-nowrap`}>
                     {isSoldOut ? t("items.sold") : t("items.oneOfAKind")}
                   </div>
                 )}
                 
                 {!isSoldOut && product.metadata.discount_eligible === 'true' && (
-                  <div className="absolute top-6 right-4 sm:top-8 sm:right-8 bg-teal-600/90 backdrop-blur text-white px-3 py-1.5 sm:px-6 sm:py-2.5 rounded-full text-[9px] sm:text-[10px] font-bold uppercase tracking-widest z-20 shadow-lg pointer-events-none whitespace-nowrap">
+                  <div className="absolute top-3 right-3 sm:top-8 sm:right-8 bg-teal-600/90 backdrop-blur text-white px-2 py-1 sm:px-6 sm:py-2.5 rounded-full text-[8px] sm:text-[10px] font-bold uppercase tracking-widest z-20 shadow-lg pointer-events-none whitespace-nowrap">
                     15% Discount
                   </div>
                 )}
@@ -140,31 +140,31 @@ export function ShopDisplay({ products }: ShopDisplayProps) {
               </div>
 
               {/* Content */}
-              <div className="p-8 sm:p-10 flex flex-col flex-1">
-                <div className="flex flex-col gap-1 sm:gap-1 w-full text-center md:text-left mb-6 sm:mb-8 min-h-[140px]">
-                  <h3 className="text-2xl font-display font-medium text-zinc-900 dark:text-white group-hover:text-zinc-500 transition-colors mb-4 tracking-tighter line-clamp-2 leading-tight">
+              <div className="p-3 sm:p-8 md:p-10 flex flex-col flex-1">
+                <div className="flex flex-col gap-1 sm:gap-1 w-full text-center md:text-left mb-4 sm:mb-8 min-h-[90px] sm:min-h-[140px]">
+                  <h3 className="text-sm sm:text-xl md:text-2xl font-display font-medium text-zinc-900 dark:text-white group-hover:text-zinc-500 transition-colors mb-2 sm:mb-4 tracking-tighter line-clamp-2 leading-tight">
                     {product.name}
                   </h3>
-                    <div className="flex flex-col items-center md:items-start gap-1 sm:gap-1 min-h-[60px] justify-start">
+                    <div className="flex flex-col items-center md:items-start gap-1 sm:gap-1 min-h-[40px] sm:min-h-[60px] justify-start">
                       {product.metadata.discount_eligible === 'true' && !isSoldOut && price ? (
                         <>
-                          <span className="text-sm font-display italic text-zinc-400 line-through leading-none">
+                          <span className="text-xs sm:text-sm font-display italic text-zinc-400 line-through leading-none">
                             {priceString}
                           </span>
-                          <span className="text-2xl font-display italic text-zinc-900 dark:text-white leading-tight">
+                          <span className="text-sm sm:text-xl md:text-2xl font-display italic text-zinc-900 dark:text-white leading-tight">
                             {new Intl.NumberFormat('en-GB', {
                               style: 'currency',
                               currency: price.currency.toUpperCase(),
                             }).format((price.unit_amount * 0.85) / 100)}
                           </span>
-                          <span className="mt-1 px-2 py-0.5 bg-zinc-50 dark:bg-zinc-950/30 text-teal-600 dark:text-teal-400 text-[9px] font-bold uppercase tracking-widest rounded border border-zinc-100 dark:border-zinc-900/50">
+                          <span className="mt-1 sm:mt-1 px-1.5 py-0.5 bg-zinc-50 dark:bg-zinc-950/30 text-teal-600 dark:text-teal-400 text-[8px] sm:text-[9px] font-bold uppercase tracking-widest rounded border border-zinc-100 dark:border-zinc-900/50">
                             Use code: sicamon
                           </span>
                         </>
                       ) : (
                         <span className={isSoldOut 
-                          ? "text-2xl font-display italic text-zinc-400 line-through" 
-                          : "text-2xl font-display italic text-zinc-900 dark:text-white"
+                          ? "text-sm sm:text-xl md:text-2xl font-display italic text-zinc-400 line-through" 
+                          : "text-sm sm:text-xl md:text-2xl font-display italic text-zinc-900 dark:text-white"
                         }>
                           {priceString}
                         </span>
@@ -172,7 +172,7 @@ export function ShopDisplay({ products }: ShopDisplayProps) {
                     </div>
                   </div>
                 
-                <p className="text-sm text-zinc-500 dark:text-zinc-400 line-clamp-3 mb-8 sm:mb-10 min-h-[110px] leading-relaxed italic font-serif text-center flex-1">
+                <p className="hidden sm:block text-sm text-zinc-500 dark:text-zinc-400 line-clamp-3 mb-8 sm:mb-10 min-h-[110px] leading-relaxed italic font-serif text-center flex-1">
                   {product.description || t("items.defaultDescription")}
                 </p>
 

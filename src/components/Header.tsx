@@ -37,8 +37,8 @@ export function Header() {
             </div>
             
             <div className="flex flex-1 justify-center">
-              <nav className="hidden md:block">
-                <ul className="flex gap-1 text-sm font-medium text-zinc-800 dark:text-zinc-200">
+              <nav className="block">
+                <ul className="flex gap-0.5 sm:gap-2 text-xs sm:text-sm font-medium text-zinc-800 dark:text-zinc-200">
                   <NavItem href="/">{t("nav.shop")}</NavItem>
                   <NavItem href="/contact">{t("nav.contact")}</NavItem>
                 </ul>
@@ -60,7 +60,7 @@ function NavItem({ href, children }: { href: string; children: React.ReactNode }
     <li>
       <Link
         href={href}
-        className="relative block px-3 py-2 transition hover:text-zinc-500 dark:hover:text-zinc-400"
+        className="relative block px-1.5 sm:px-3 py-1 sm:py-2 transition hover:text-zinc-500 dark:hover:text-zinc-400 whitespace-nowrap"
       >
         {children}
       </Link>
