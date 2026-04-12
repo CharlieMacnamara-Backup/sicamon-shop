@@ -9,6 +9,7 @@ export default createMiddleware(routing);
 export const config = {
   // Match all pathnames except for:
   // - API routes, tRPC, _next, _vercel
-  // - Files containing a dot (e.g., favicon.ico, images)
-  matcher: ['/((?!api|trpc|_next|_vercel|.*\\..*).*)']
+  // - Standard asset extensions (to prevent unnecessary middleware overhead)
+  matcher: ['/((?!api|trpc|_next|_vercel|.*\\.(?:ico|png|jpg|jpeg|svg|css|js|txt|xml|webmanifest)).*)']
 };
+

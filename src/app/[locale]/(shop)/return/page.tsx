@@ -4,6 +4,7 @@ import { Link } from '@/i18n/routing';
 import { Suspense, use } from 'react';
 import { setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
+import { Container } from '@/components/ui/Container';
 
 interface ReturnPageProps {
   params: Promise<{ locale: string }>;
@@ -94,7 +95,7 @@ function ReturnContent({
           </div>
         </div>
 
-        <Link href="/" className="inline-flex items-center gap-2 text-zinc-500 hover:text-zinc-900 dark:hover:text-white transition-colors font-bold uppercase tracking-[0.2em] text-[10px] sm:text-xs">
+        <Link href="/" className="inline-flex items-center gap-2 sm:gap-3 text-zinc-500 hover:text-zinc-900 dark:hover:text-white transition-colors font-bold uppercase tracking-[0.2em] text-[10px] sm:text-xs">
           <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
           </svg>
@@ -116,11 +117,11 @@ function ReturnContent({
 export default function ReturnPage({ params, searchParams }: ReturnPageProps) {
   return (
     <Suspense fallback={
-      <div className="container mx-auto px-4 pt-48 pb-20 text-center animate-pulse">
-        <div className="w-16 h-16 bg-zinc-200 dark:bg-zinc-800 rounded-full mx-auto mb-8" />
-        <div className="h-10 w-2/3 bg-zinc-200 dark:bg-zinc-800 rounded-lg mx-auto mb-4" />
+      <Container className="pt-32 sm:pt-48 pb-16 sm:pb-20 text-center animate-pulse">
+        <div className="w-16 h-16 bg-zinc-200 dark:bg-zinc-800 rounded-full mx-auto mb-6 sm:mb-8" />
+        <div className="h-10 w-2/3 bg-zinc-200 dark:bg-zinc-800 rounded-lg mx-auto mb-3 sm:mb-4" />
         <div className="h-4 w-1/2 bg-zinc-200 dark:bg-zinc-800 rounded mx-auto" />
-      </div>
+      </Container>
     }>
       <ReturnContent params={params} searchParams={searchParams} />
     </Suspense>

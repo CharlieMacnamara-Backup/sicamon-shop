@@ -69,7 +69,7 @@ export function Footer() {
              </div>
             <div className="flex gap-6">
               <a 
-                href="https://www.tiktok.com/@sicamon" 
+                href="https://www.tiktok.com/@sicamon.designs" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors"

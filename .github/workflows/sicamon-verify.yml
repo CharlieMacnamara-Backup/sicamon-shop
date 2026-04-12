@@ -10,6 +10,10 @@ jobs:
   verify:
     name: 10x Audit & Build Verification
     runs-on: ubuntu-latest
+    env:
+      STRIPE_SECRET_KEY: "${{secrets.STRIPE_SECRET_KEY || ''}}"
+      NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY: "${{secrets.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY || ''}}"
+      STRIPE_WEBHOOK_SECRET: "${{secrets.STRIPE_WEBHOOK_SECRET || ''}}"
     
     steps:
       - uses: actions/checkout@v4
@@ -25,12 +29,7 @@ jobs:
         
       - name: Sicamon 10x Audit (Zod + Security)
         run: npm run verify
-        env:
-          STRIPE_SECRET_KEY: ${{ secrets.STRIPE_SECRET_KEY }}
           
       - name: Next.js 16 Build Verification (OpenNext)
         run: npm run build
-        env:
-          NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY: ${{ secrets.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY }}
-          STRIPE_SECRET_KEY: ${{ secrets.STRIPE_SECRET_KEY }}
-          STRIPE_WEBHOOK_SECRET: ${{ secrets.STRIPE_WEBHOOK_SECRET }}
+
