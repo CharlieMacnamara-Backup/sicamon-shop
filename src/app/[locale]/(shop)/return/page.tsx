@@ -45,7 +45,7 @@ function ReturnContent({
       <div className="container mx-auto px-6 sm:px-12 pt-24 sm:pt-32 pb-20 sm:pb-24 text-center">
         <h1 className="text-4xl font-display font-bold mb-4 sm:mb-6 tracking-tighter italic">{t("errorTitle")}</h1>
         <p className="text-zinc-600 dark:text-zinc-400 mb-6 sm:mb-8 font-medium italic">{t("errorSubtitle")}</p>
-        <Link href="/" className="btn-premium px-12 py-5 uppercase tracking-widest text-xs">{t("backBtn")}</Link>
+        <Link href="/" className="btn-premium px-12 sm:px-14 py-5 sm:py-6 uppercase tracking-widest text-xs">{t("backBtn")}</Link>
       </div>
     );
   }
@@ -55,7 +55,7 @@ function ReturnContent({
       <div className="container mx-auto px-6 sm:px-12 pt-24 sm:pt-32 pb-20 sm:pb-24 text-center">
         <h1 className="text-4xl font-display font-bold mb-4 sm:mb-6 tracking-tighter italic">{t("pendingTitle")}</h1>
         <p className="text-zinc-600 dark:text-zinc-400 mb-6 sm:mb-8 font-medium italic">{t("pendingSubtitle")}</p>
-        <Link href="/" className="btn-premium px-12 py-5 uppercase tracking-widest text-xs">{t("backBtn")}</Link>
+        <Link href="/" className="btn-premium px-12 sm:px-14 py-5 sm:py-6 uppercase tracking-widest text-xs">{t("backBtn")}</Link>
       </div>
     );
   }
@@ -109,7 +109,7 @@ function ReturnContent({
     <div className="container mx-auto px-6 sm:px-12 pt-24 sm:pt-32 pb-20 sm:pb-24 text-center">
       <h1 className="text-4xl font-display font-bold mb-4 sm:mb-6 text-zinc-900 dark:text-white tracking-tighter italic">{t("status")}</h1>
       <p className="text-zinc-600 dark:text-zinc-400 mb-6 sm:mb-8 font-medium">Status: {session.status}</p>
-      <Link href="/" className="btn-premium px-12 py-5 uppercase tracking-widest text-xs">{t("backBtn")}</Link>
+      <Link href="/" className="btn-premium px-12 sm:px-14 py-5 sm:py-6 uppercase tracking-widest text-xs">{t("backBtn")}</Link>
     </div>
   );
 }

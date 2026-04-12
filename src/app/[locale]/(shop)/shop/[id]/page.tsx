@@ -66,7 +66,7 @@ function ProductContent({ params }: { params: Promise<{ id: string; locale: stri
               </div>
             )}
             {isSoldOut && (
-              <div className="absolute top-8 right-8 bg-zinc-900/90 backdrop-blur text-white px-6 py-2 rounded-full text-sm font-bold uppercase tracking-widest z-20">
+              <div className="absolute top-6 sm:top-8 right-6 sm:right-8 bg-zinc-900/90 backdrop-blur text-white px-4 sm:px-6 py-1.5 sm:py-2 rounded-full text-[10px] sm:text-sm font-bold uppercase tracking-widest z-20">
                 Sold Out
               </div>
             )}
@@ -91,12 +91,12 @@ function ProductContent({ params }: { params: Promise<{ id: string; locale: stri
               <p className="text-xl text-zinc-600 dark:text-zinc-400 leading-relaxed font-medium italic">
                 {product.description || 'This exclusive bespoke textile is a masterpiece of modern texture and traditional hand-tufted technique, part of the permanent Sicamon collection.'}
               </p>
-              <ul className="mt-10 space-y-6 text-zinc-500 font-medium border-l border-zinc-100 dark:border-zinc-800 pl-8">
-                <li className="flex items-center gap-4">
+              <ul className="mt-8 sm:mt-10 space-y-4 sm:space-y-6 text-zinc-500 font-medium border-l border-zinc-100 dark:border-zinc-800 pl-6 sm:pl-8">
+                <li className="flex items-center gap-3 sm:gap-4">
                   <div className="w-1.5 h-1.5 rounded-full bg-zinc-900 dark:bg-white" />
                   Hand-tufted with sustainable, curated materials
                 </li>
-                <li className="flex items-center gap-4">
+                <li className="flex items-center gap-3 sm:gap-4">
                   <div className="w-1.5 h-1.5 rounded-full bg-zinc-900 dark:bg-white" />
                   Designed for curated wall display or low-traffic floors
                 </li>
@@ -104,7 +104,7 @@ function ProductContent({ params }: { params: Promise<{ id: string; locale: stri
             </div>
 
             {/* Studio Process Showcase */}
-            <div className="mb-14">
+            <div className="mb-10 sm:mb-14">
               <Suspense fallback={
                 <div className="absolute inset-0 aspect-9/16 overflow-hidden rounded-4xl bg-zinc-100 dark:bg-zinc-800 shadow-2xl ring-1 ring-zinc-200 dark:ring-zinc-700" />
               }>
@@ -135,15 +135,15 @@ function ProductContent({ params }: { params: Promise<{ id: string; locale: stri
 
 export default function ProductDetailsPage({ params }: ProductPageProps) {
   return (
-    <div className="bg-zinc-50 dark:bg-zinc-950 min-h-screen pt-32 pb-24">
+    <div className="bg-zinc-50 dark:bg-zinc-950 min-h-screen pt-24 sm:pt-32 pb-20 sm:pb-24">
       <Suspense fallback={
-        <div className="container mx-auto px-6 sm:px-10 animate-pulse">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div className="container mx-auto px-6 sm:px-10 lg:px-16 animate-pulse pt-24 sm:pt-32">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
             <div className="aspect-4/5 bg-zinc-100 dark:bg-zinc-800 rounded-2xl animate-pulse" />
             <div className="space-y-8">
               <div className="h-16 w-3/4 bg-zinc-200 dark:bg-zinc-800 rounded-lg" />
               <div className="h-8 w-1/4 bg-zinc-200 dark:bg-zinc-800 rounded-lg" />
-              <div className="space-y-4">
+              <div className="space-y-6 sm:space-y-8">
                 <div className="h-4 w-full bg-zinc-200 dark:bg-zinc-800 rounded" />
                 <div className="h-4 w-full bg-zinc-200 dark:bg-zinc-800 rounded" />
                 <div className="h-4 w-2/3 bg-zinc-200 dark:bg-zinc-800 rounded" />
