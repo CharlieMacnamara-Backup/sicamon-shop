@@ -1,13 +1,13 @@
 {
   "Common": {
-    "loading": "Loading Sicamon...",
-    "error": "A touch of chaos occurred",
-    "loadingDocument": "Preparing document for your review..."
+    "loading": "Loading.",
+    "error": "Error.",
+    "loadingDocument": "Preparing document."
   },
   "ThemeToggle": {
     "themeToggle": {
-      "light": "Switch to light mode",
-      "dark": "Switch to dark mode"
+      "light": "Light mode",
+      "dark": "Dark mode"
     }
   },
   "Header": {
@@ -18,176 +18,176 @@
     }
   },
   "Hero": {
-    "badge": "Est. Autumn 2024",
-    "titlePrefix": "Hand-Tufted Art",
-    "titleSuffix": "From Any Vision*",
-    "description": "Hello art enjoyers. This is my path away from screens and doomscrolling—satisfying a yearning for arts and crafts while I capitalise on the decades of hand-to-eye coordination I’ve honed playing maddening platform games.",
+    "badge": "Est. 2024",
+    "titlePrefix": "Hand-Tufted",
+    "titleSuffix": "From Any Vision",
+    "description": "Steping away from screens, I channel decades of gaming reflexes into unique, hand-tufted art.",
     "cta": {
-      "gallery": "The Gallery",
-      "contact": "Commission a Piece"
+      "gallery": "Gallery",
+      "contact": "Commission"
     },
-    "footer": "All rugs are unique 1-of-1 creations. Studio handcrafted quality.",
+    "footer": "Unique 1-of-1 creations. Handcrafted.",
     "imageAlt": "Sicamon Studio Setup"
   },
   "CTASection": {
     "title": "Secure Your Vision",
-    "description": "Whether it's a cherished memory, a favorite character, or an original artwork — let's transform it into a statement piece for your collection.",
+    "description": "Transform memories, characters, or original art into statement pieces.",
     "cta": {
-      "gallery": "Back to Archive",
-      "contact": "Message the Studio"
+      "gallery": "Archive",
+      "contact": "Message Studio"
     },
-    "footer": "Boutique Quality • Handcrafted in Scotland"
+    "footer": "Handcrafted in Scotland."
   },
   "Shop": {
-    "title": "Current Gallery",
-    "description": "Available textile art from the current drop. For custom commission requests, please visit the Studio page. Use code sicamon at checkout for 15% curated discount.",
+    "title": "Gallery",
+    "description": "Current drop available. For commissions, visit the Studio. Use code sicamon for 15% off.",
     "pricing": {
       "title": "Collection Info & Sizing",
-      "details": "Pricing is generally £20-40 per square foot depending on detail, with wiggle room for custom budgets. Standard max is 36\" x 54\". Use code sicamon for curated themes."
+      "details": "£20-40 per square foot, scaled by detail. Max size: 36\" x 54\". Use code sicamon for themed discounts."
     },
     "details": {
-      "cta": "Acquire Piece"
+      "cta": "Acquire"
     },
     "items": {
-      "awaitingImage": "Awaiting Presentation",
+      "awaitingImage": "Coming Soon",
       "archived": "Archived",
       "oneOfAKind": "1-of-1",
       "sold": "Sold",
       "buyNow": "Buy Now",
-      "securing": "Securing...",
+      "securing": "Securing",
       "outOfStock": "Out of Stock",
       "dimensions": "Dimensions",
       "viewProcess": "View Process",
-      "closeGallery": "Exit Gallery",
-      "defaultDescription": "Unique hand-tufted rug from my collection.",
-      "curatorHint": "Use code sicamon at checkout to apply 15% curator discount on this piece."
+      "closeGallery": "Exit",
+      "defaultDescription": "Unique hand-tufted rug.",
+      "curatorHint": "Use code sicamon for 15% off."
     },
     "empty": {
-      "title": "The Loom is Currently Silent",
-      "description": "Every museum-grade piece in the boutique is a unique, hand-tufted creation. The studio is currently preparing the next limited drop.",
-      "cta": "Request Commission"
+      "title": "Loom Silent",
+      "description": "Preparing the next limited drop.",
+      "cta": "Commission"
     }
   },
   "Contact": {
-    "title": "Studio & Commissions",
-    "intro": "Thanks for visiting the studio. Contact me at amonsic@hotmail.com with any commission requests or to get a quote.",
+    "title": "Commissions",
+    "intro": "Email amonsic@hotmail.com for commissions and quotes.",
     "sendEmail": "Message",
     "discounts": {
       "title": "Special Collections",
-      "subtitle": "Currently offering a 15% discount on pieces themed around the following curated aesthetics:",
-      "content": "Apply code sicamon for 15% off themes like: Over the Garden Wall, Gurren Lagann, Kill la Kill, Thundercats, Studio Ghibli, SpongeBob Squarepants, Zelda: Wind Waker, Looney Tunes, & the art of Max Fleischer, Richard Scarry or Mike Mignola."
+      "subtitle": "15% off curated aesthetics.",
+      "content": "Apply code sicamon for 15% off: Over the Garden Wall, Gurren Lagann, Kill la Kill, Thundercats, Studio Ghibli, SpongeBob, Zelda, Looney Tunes, Max Fleischer, Richard Scarry, Mike Mignola."
     },
     "care": {
-      "title": "Rug Care Guide",
+      "title": "Rug Care",
       "maintenance": "Maintenance",
       "placement": "Placement",
       "cleaning": "Cleaning",
-      "tip1": "Clean the rug regularly – it’s handmade and will molt a little, so vacuum at least once a week. Loose threads are normal and can be trimmed with scissors.",
-      "tip2": "Best for curated decoration rather than high-traffic areas. This is art for your floor, not hard-wearing protection.",
-      "tip3": "If stained, use a soft bristle brush with warm water and detergent, then air dry. Never machine wash as some threads will detach."
+      "tip1": "Vacuum weekly. Trim loose threads with scissors.",
+      "tip2": "Floor art, not armor. Avoid high traffic.",
+      "tip3": "Spot clean with warm water and detergent. Air dry. Never machine wash."
     },
-    "footer": "Bespoke Textiles • Handcrafted in the UK",
-    "studioLabel": "Hand-tufted bespoke art, handcrafted from my studio."
+    "footer": "Handcrafted in the UK",
+    "studioLabel": "Bespoke art from the studio."
   },
   "Footer": {
     "logoAlt": "Sicamon Logo",
-    "description": "Handcrafted tufted rugs. 1-of-1 creations made with passion and precision.",
+    "description": "Handcrafted 1-of-1 tufted rugs.",
     "columns": {
       "nav": "Navigation",
       "legal": "Legal"
     },
     "links": {
-      "shop": "Rug Gallery",
-      "contact": "The Studio",
-      "privacy": "Privacy Policy",
-      "terms": "Terms of Service"
+      "shop": "Gallery",
+      "contact": "Studio",
+      "privacy": "Privacy",
+      "terms": "Terms"
     },
-    "copyright": "© 2026 Sicamon. All rights reserved."
+    "copyright": "© 2026 Sicamon."
   },
   "Privacy": {
-    "back": "Return to Home",
-    "title": "Privacy Protocol",
-    "subtitle": "How personal data and artistic commissions are protected within the secure boutique infrastructure.",
+    "back": "Return",
+    "title": "Privacy",
+    "subtitle": "How we protect your data and commissions.",
     "effective": "Effective: April 2026",
     "sections": {
       "collection": {
         "title": "1. Data Acquisition",
-        "content": "The studio only collects essential information required to fulfill bespoke commissions and manage the secure checkout session."
+        "content": "We collect only what is necessary to fulfill commissions and process checkouts."
       },
       "personal": {
         "title": "2. Personal Insight",
-        "content": "Your name, email, and shipping address are held with the strictest confidentiality via a Stripe-integrated CRM."
+        "content": "Name, email, and address remain strictly confidential via Stripe."
       },
       "usage": {
         "title": "3. Artistic Usage",
-        "content": "Commissioned designs are archived for historical studio records unless explicitly requested otherwise by the collector."
+        "content": "We archive commissioned designs for records unless asked otherwise."
       },
       "security": {
         "title": "4. Secure Vaulting",
-        "content": "All transaction data is encrypted and vaulted using industry-standard 256-bit protocols."
+        "content": "Transactions use 256-bit encryption."
       },
       "rights": {
         "title": "5. Collector Rights",
-        "content": "You maintain full authority over your personal data and can request an archive purge at any moment."
+        "content": "You control your data. Request an archive purge anytime."
       },
       "thirdParty": {
         "title": "6. Studio Partners",
-        "content": "Data is never sold. Information is only shared with essential fulfillment partners like Stripe and courier services."
+        "content": "We never sell data. We share it only with Stripe and couriers."
       },
       "contact": {
         "title": "7. Studio Inquiry",
-        "content": "For privacy-related questions, please message amonsic@hotmail.com directly."
+        "content": "Questions? Email amonsic@hotmail.com."
       }
     }
   },
   "Terms": {
-    "back": "Return to Home",
-    "title": "Studio Agreements",
-    "subtitle": "The formal governing framework for acquiring pieces from the Sicamon collection.",
+    "back": "Return",
+    "title": "Agreements",
+    "subtitle": "The formal framework for acquiring Sicamon pieces.",
     "revised": "Revised: April 2026",
     "sections": {
       "acceptance": {
         "title": "1. Acquisition Terms",
-        "content": "By commissioning or acquiring a piece, you enter into a formal agreement with Sicamon."
+        "content": "Commissioning a piece creates a formal agreement."
       },
       "service": {
         "title": "2. The Craft",
-        "content": "Every piece is a unique 1-of-1 creation. Natural variations and hand-tufted nuances are part of the artistic value."
+        "content": "Each piece is 1-of-1. Natural variations define the art."
       },
       "responsibilities": {
         "title": "3. Collector Responsibility",
-        "content": "Collectors are responsible for providing accurate commission details and shipping information."
+        "content": "Provide accurate commission and shipping details."
       },
       "intellectual": {
         "title": "4. Artistic Property",
-        "content": "Sicamon retains the artistic copyright for all original designs, even after acquisition by a collector."
+        "content": "Sicamon retains original design copyrights."
       },
       "liability": {
         "title": "5. Studio Liability",
-        "content": "Studio liability is limited to the acquisition price of the piece. I am not responsible for wear resulting from high-traffic environments."
+        "content": "Liability caps at purchase price. No coverage for high-traffic wear."
       },
       "law": {
         "title": "6. Governing Jurisdiction",
-        "content": "These terms are governed by the laws of the United Kingdom."
+        "content": "Governed by UK law."
       },
       "contact": {
         "title": "7. Formal Engagement",
-        "content": "For legal inquiries or term clarifications, contact amonsic@hotmail.com."
+        "content": "Legal inquiries: amonsic@hotmail.com."
       }
     }
   },
   "Return": {
-    "errorTitle": "Something went wrong",
-    "errorSubtitle": "Session information could not be retrieved.",
-    "pendingTitle": "Acquisition in Progress",
-    "pendingSubtitle": "Your secure transaction is being processed. Please wait a moment.",
+    "errorTitle": "Error",
+    "errorSubtitle": "Session failed.",
+    "pendingTitle": "Acquiring",
+    "pendingSubtitle": "Processing transaction.",
     "successTitle": "Mission Accomplished",
-    "successSubtitle": "Order received! Please check your email inbox at",
-    "successTip": "A receipt has been sent. A tracking link will follow via email as soon as the piece is dispatched.",
+    "successSubtitle": "Order received. Check email at",
+    "successTip": "Receipt sent. Tracking follows upon dispatch.",
     "summaryTitle": "Collection Summary",
     "orderId": "Transaction ID",
     "totalPaid": "Total Secured",
-    "backBtn": "Return to Gallery",
+    "backBtn": "Return",
     "status": "Session Status"
   }
 }
